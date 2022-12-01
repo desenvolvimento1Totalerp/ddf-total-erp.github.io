@@ -1,0 +1,39 @@
+<p-panel [toggleable]="true" [collapsed]="true" toggler="header" collapseIcon='pi pi-angle-down'
+  expandIcon='pi pi-angle-right' [transitionOptions]="'150ms'">
+  <p-header>
+    <span style="font-weight: bold;">NF-e</span>
+    <span class="badge-branco">{{ dados.ultimoDoc }}</span>
+  </p-header>
+
+  <ng-template pTemplate="icons">
+    <span>
+      <i class="pi pi-circle-on" [style.color]="obterCorStatusDocumento()"></i>
+    </span>
+    <span class="badge-branco">{{ dados.total }}</span>
+  </ng-template>
+
+  <p-scrollPanel [style]="{width: '100%', height: '120px'}">
+    <ul class="list-group">
+      <li [class]="obterClassProcessoEnvio()">
+        Processo de Envio
+        <span class="badge" style="float: right;">{{ dados.envio }}</span>
+      </li>
+      <li [class]="obterClassRejeitado()">
+        Rejeitados
+        <span class="badge" style="float: right;">{{ dados.rejeitado }}</span>
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Autorizados
+        <span class="badge" style="float: right;">{{ dados.autorizados }}</span>
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Cancelados
+        <span class="badge" style="float: right;">{{ dados.cancelados }}</span>
+      </li>
+      <li class="list-group-item list-group-item-success">
+        Digitação
+        <span class="badge" style="float: right;">{{ dados.digitacao }}</span>
+      </li>
+    </ul>
+  </p-scrollPanel>
+</p-panel>

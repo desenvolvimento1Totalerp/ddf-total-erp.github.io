@@ -1,0 +1,106 @@
+<div class="p-grid" style="margin-top: 0 !important;">
+  <div class="p-col-12 p-md-6">
+    <p-panel [toggleable]="true" [collapsed]="true" toggler="header" collapseIcon='pi pi-angle-down'
+      expandIcon='pi pi-angle-right' [transitionOptions]="'150ms'">
+      <p-header>
+        <span style="font-weight: bold;">Conexões ativas</span>
+      </p-header>
+
+      <ng-template pTemplate="icons">
+        <span class="badge-branco">{{ ativas?.length }}</span>
+      </ng-template>
+
+      <p-table [value]="ativas" styleClass="p-datatable-responsive-demo" [scrollable]="true" scrollHeight="115px">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>#</th>
+            <th>Cliente</th>
+            <th>App.</th>
+            <th>Total</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-conexao>
+          <tr>
+            <td>
+              <i class="pi pi-circle-on" [style.color]="obterCorStatus(conexao.total, 20)"></i>
+            </td>
+            <td>{{conexao.client}}</td>
+            <td>{{conexao.appName}}</td>
+            <td>{{conexao.total}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-panel>
+  </div>
+
+  <div class="p-col-12 p-md-6">
+    <p-panel [toggleable]="true" [collapsed]="true" toggler="header" collapseIcon='pi pi-angle-down'
+      expandIcon='pi pi-angle-right' [transitionOptions]="'150ms'">
+      <p-header>
+        <span style="font-weight: bold;">Conexões ociosas</span>
+      </p-header>
+
+      <ng-template pTemplate="icons">
+        <span class="badge-branco">{{ ociosas?.length }}</span>
+      </ng-template>
+
+      <p-table [value]="ociosas" styleClass="p-datatable-responsive-demo" [scrollable]="true" scrollHeight="115px">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>#</th>
+            <th>Cliente</th>
+            <th>App.</th>
+            <th>Total</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-conexao>
+          <tr>
+            <td>
+              <i class="pi pi-circle-on" [style.color]="obterCorStatus(conexao.total, 80)"></i>
+            </td>
+            <td>{{conexao.client}}</td>
+            <td>{{conexao.appName}}</td>
+            <td>{{conexao.total}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-panel>
+  </div>
+
+  <div class="p-col-12 p-md-12">
+    <p-panel [toggleable]="true" [collapsed]="true" toggler="header" collapseIcon='pi pi-angle-down'
+      expandIcon='pi pi-angle-right' [transitionOptions]="'150ms'">
+      <p-header>
+        <span style="font-weight: bold;">Conexões travadas</span>
+      </p-header>
+
+      <ng-template pTemplate="icons">
+        <span>
+          <i class="pi pi-circle-on" [style.color]="corTravadas"></i>
+        </span>
+        <span class="badge-branco">{{ travadas?.length }}</span>
+      </ng-template>
+
+      <p-table [value]="travadas" styleClass="p-datatable-responsive-demo" [scrollable]="true" scrollHeight="115px">
+        <ng-template pTemplate="header">
+          <tr>
+            <th>PID</th>
+            <th>Cliente</th>
+            <th>App.</th>
+            <th>Inicio Transação</th>
+            <th>Inicio Query</th>
+          </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-conexao>
+          <tr>
+            <td>{{conexao.pid}}</td>
+            <td>{{conexao.client}}</td>
+            <td>{{conexao.appName}}</td>
+            <td>{{conexao.inicioTransacao}}</td>
+            <td>{{conexao.inicioQuery}}</td>
+          </tr>
+        </ng-template>
+      </p-table>
+    </p-panel>
+  </div>
+</div>

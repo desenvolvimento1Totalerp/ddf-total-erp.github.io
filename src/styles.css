@@ -1,0 +1,164 @@
+/* You can add global styles to this file, and also import other style files */
+
+@media(min-width: 1200px) {
+  .container {
+    width: 1170px;
+    margin: 0 auto;
+  }
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  color: #333333;
+  margin: 0;
+  background-color: #EDF0F5;
+}
+
+body .p-panel .p-panel-header .p-panel-header-icon {
+  color: #FFFFFF;
+}
+
+body .p-panel .p-panel-header {
+  background-color: #0867A3;
+  color: #FFFFFF;
+  border-color: #0867A3;
+}
+
+body .p-panel .p-panel-content {
+  border-color: #e0e0e0;
+  padding: .02em 0em !important;
+  margin: 0 !important;
+}
+
+body .p-panel .p-panel-content ul {
+  list-style: none;
+}
+
+ul {
+  margin-top: 0px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.p-scrollpanel .p-scrollpanel-bar {
+  width: 15px;
+  background-color: #777777 !important;
+  opacity: 1;
+  transition: background-color .3s;
+}
+
+.p-scrollpanel .p-scrollpanel-bar:hover {
+  background-color: #babaca !important;
+}
+
+.list-group {
+  padding-left: 0;
+}
+
+.list-group-item {
+  position: relative;
+  display: block;
+  padding: 10px 15px;
+  margin-bottom: -1px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.list-group-item-success {
+  color: #3c763d;
+  background-color: #dff0d8;
+}
+
+.list-group-item-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+}
+
+.list-group-item-danger {
+  color: #a94442;
+  background-color: #f2dede;
+}
+
+.badge {
+  color: #FFFFFF;
+  background-color: #777;
+  display: inline-block;
+  min-width: 10px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+.badge-branco {
+  color: #0867A3;
+  background-color: #FFFFFF;
+  display: inline-block;
+  min-width: 10px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  margin-left: 5px;
+}
+
+body .ui-panel .ui-panel-titlebar .badge {
+  background-color: #FFFFFF;
+  color: #337ab7;
+}
+
+.btn-logout {
+  color: #FFFFFF !important;
+}
+
+.p-panel .p-panel-content {
+  padding: 0 !important;
+}
+
+:host ::ng-deep {
+  .p-datatable-responsive-demo .p-datatable-tbody>tr>td .p-column-title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 40rem) {
+  :host ::ng-deep {
+    .p-datatable {
+      &.p-datatable-responsive-demo {
+        .p-datatable-thead>tr>th, .p-datatable-tfoot>tr>td {
+          display: none !important;
+        }
+        .p-datatable-tbody>tr>td {
+          text-align: left;
+          display: block;
+          width: 100%;
+          float: left;
+          clear: left;
+          border: 0 none;
+          .p-column-title {
+            padding: .4rem;
+            min-width: 30%;
+            display: inline-block;
+            margin: -.4em 1em -.4em -.4rem;
+            font-weight: bold;
+          }
+          &:last-child {
+            border-bottom: 1px solid var(--surface-d);
+          }
+        }
+      }
+    }
+  }
+}

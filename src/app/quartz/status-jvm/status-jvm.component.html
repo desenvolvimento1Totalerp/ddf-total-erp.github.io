@@ -1,0 +1,36 @@
+<p-panel [toggleable]="true" [collapsed]="false" toggler="header" collapseIcon='pi pi-angle-down'
+  expandIcon='pi pi-angle-right' [transitionOptions]="'150ms'">
+  <p-header>
+    <span style="font-weight: bold;">Quartz</span>
+  </p-header>
+
+  <ng-template pTemplate="icons">
+    <span class="badge-branco" [style.color]="qtdTarefas >= 30 ? 'red' : '#0867A3'">Tarefas: {{
+      qtdTarefas }}</span>
+  </ng-template>
+
+  <div class="p-grid">
+    <div class="p-col-12 p-md-4" style="text-align: center; margin-top: 5px;">
+      App 1 - hqwgzu
+      <span class="badge">{{ obterStatusEscrito(app1) }}</span>
+      <span style="float: right;">
+        <i class="pi pi-circle-on" [style.color]="obterCorStatus(app1)" style="margin: 0px 10px 0px 0px;"></i>
+      </span>
+    </div>
+    <div class="p-col-12 p-md-4" style="text-align: center; margin-top: 5px;">
+      App 2 - keqext
+      <span class="badge">{{ obterStatusEscrito(app2) }}</span>
+      <span style="float: right;">
+        <i class="pi pi-circle-on" [style.color]="obterCorStatus(app2)" style="margin: 0px 10px 0px 0px;"></i>
+      </span>
+    </div>
+    <div class="p-col-12 p-md-4" style="text-align: center; margin-top: 5px;">
+      App 3 - zalodx
+      <span class="badge">{{ obterStatusEscrito(app3) }}</span>
+      <span style="float: right;">
+        <i class="pi pi-circle-on" [style.color]="obterCorStatus(app3)" style="margin: 0px 10px 0px 0px;"></i>
+      </span>
+    </div>
+  </div>
+
+</p-panel>

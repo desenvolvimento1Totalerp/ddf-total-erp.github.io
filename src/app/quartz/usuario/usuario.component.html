@@ -1,0 +1,25 @@
+<div class="p-grid" style="margin-top: 0 !important;">
+  <div class="p-col-12 p-md-6">
+    <p-panel [toggleable]="false">
+      <p-header>
+        <span style="font-weight: bold;">Usuários ativos</span>
+      </p-header>
+
+      <ng-template pTemplate="icons">
+        <span class="badge-branco">{{ dto.sessoesAtivas }}</span>
+      </ng-template>
+    </p-panel>
+  </div>
+
+  <div class="p-col-12 p-md-6">
+    <p-panel [toggleable]="false">
+      <p-header>
+        <span style="font-weight: bold;">Sessões criadas</span>
+      </p-header>
+
+      <ng-template pTemplate="icons">
+        <span class="badge-branco">{{ dto.sessoesCriadas }}</span>
+      </ng-template>
+    </p-panel>
+  </div>
+</div>
